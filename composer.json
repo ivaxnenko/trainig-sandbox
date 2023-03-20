@@ -1,0 +1,16 @@
+{
+    "name": "ivaxnenko/training-sandbox",
+    "description": "Пакет для тренировочных реализаций",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Ivahnenko",
+            "email": "ivaxnenko.ivan@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    }
+}
