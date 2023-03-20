@@ -1,1 +1,1 @@
-# trainig-sandbox
+# training-sandbox
