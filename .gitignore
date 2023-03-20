@@ -1,0 +1,5 @@
+# ENV files
+.env
+
+# composer vendor dir
+/vendor
