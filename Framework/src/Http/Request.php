@@ -38,22 +38,22 @@ class Request implements HTTPRequestInterface
 
     public function isGet(): bool
     {
-        return $this->server()['REQUEST_METHOD'] === 'GET';
+        return$this->serverAttributes['REQUEST_METHOD'] === 'GET';
     }
 
     public function isPost(): bool
     {
-        return $this->server()['REQUEST_METHOD'] === 'POST';
+        return $this->serverAttributes['REQUEST_METHOD'] === 'POST';
     }
 
     public function getMethod(): string
     {
-        return $this->server()['REQUEST_METHOD'];
+        return $this->serverAttributes['REQUEST_METHOD'];
     }
 
     public function getUri(): string
     {
-        return $this->server()['REQUEST_URI'];
+        return$this->serverAttributes['REQUEST_URI'];
     }
 
     public function resolve()

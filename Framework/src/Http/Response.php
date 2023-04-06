@@ -8,6 +8,11 @@ class Response implements HTTPResponseInterface
 {
     private array $body;
 
+    public function setBody($data)
+    {
+        $this->body = $data;
+    }
+
     /**
      * @return Response
      */

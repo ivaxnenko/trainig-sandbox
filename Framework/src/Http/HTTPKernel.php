@@ -28,7 +28,7 @@ class HTTPKernel
      */
     public function handle(): Response
     {
-        $this->response = $this->router->dispatch($this->request);
+        $this->response->setBody($this->router->dispatch($this->request)->data);
 
         return $this->response;
     }

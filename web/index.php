@@ -16,5 +16,6 @@ $container->register(HTTPRequestInterface::class, $request);
 $kernel = $container->build(HTTPKernel::class);
 
 $response = $kernel->handle();
-
+dump($kernel);
+dd($container->build(HTTPKernel::class));
 $response->send();

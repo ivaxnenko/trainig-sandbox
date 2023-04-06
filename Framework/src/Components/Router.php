@@ -2,9 +2,10 @@
 
 namespace App\Components;
 
+use App\Http\ResponseTypes\JsonResponse;
+use App\Contracts\HTTPRouterInterface;
 use App\Contracts\HTTPRequestInterface;
 use App\Contracts\HTTPResponseInterface;
-use App\Contracts\HTTPRouterInterface;
 
 class Router implements HTTPRouterInterface
 {
@@ -14,8 +15,11 @@ class Router implements HTTPRouterInterface
      */
     public function dispatch(HTTPRequestInterface $request): HTTPResponseInterface
     {
-        $request->getMethod();
-        dd($request->getUri());
+        if ($request->isGet()) {
+            $response = new JsonResponse();
+            $response->data['body'] = $request->get();
+            return $response;
+        }
     }
 
     public function getController()
